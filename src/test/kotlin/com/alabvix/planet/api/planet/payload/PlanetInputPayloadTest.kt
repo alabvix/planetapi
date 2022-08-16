@@ -23,7 +23,7 @@ class PlanetInputPayloadTest {
         Assertions.assertFalse(violations.isEmpty())
         Assertions.assertEquals(1, violations.size)
         val violation = violations.iterator().next()
-        Assertions.assertEquals("Planet X position must be greater than 0", violation.message)
+        Assertions.assertEquals("Planet position can not be zero", violation.message)
 
     }
 }

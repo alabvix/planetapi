@@ -23,7 +23,7 @@ class PlanetIntegrationTest {
     fun `Given no input should list all planets`() {
 
         var response =
-            this.restTemplate.getForEntity("http://localhost:$port/planet", String::class.java)
+            this.restTemplate.getForEntity("http://localhost:$port", String::class.java)
 
         assertEquals(response.statusCode, HttpStatus.OK)
         val body:String = response.body.toString()

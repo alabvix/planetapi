@@ -1,7 +1,6 @@
 package com.alabvix.planet.api.planet.payload
 
 import com.alabvix.planet.api.planet.validator.PlanetId
-import java.util.*
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
