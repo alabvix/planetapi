@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  sql:
+    init:
+      data-locations: classpath:data.sql
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  h2:
+    console.enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+app:
+  info:
+    title: Planet API
+    description: API for planet operations
+    version: '@project.version@'
+    termsOfServiceUrl:
+    license: Copyright 2022
+    licenseUrl:
+
+  contact:
+    name: André Luis Barreto
+    email: alab.home@gmail.com
+    url:
