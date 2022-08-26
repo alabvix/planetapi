@@ -15,5 +15,6 @@ data class CalculateDistanceInputPayload (
     @field:NotNull
     @field:NotEmpty(message = "Planet id 2 cannot be empty")
     @field:NotBlank(message = "Planet id 2 cannot be blank")
+    @PlanetId
     val planet2Id: String,
 )

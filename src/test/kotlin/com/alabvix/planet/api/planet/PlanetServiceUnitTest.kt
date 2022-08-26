@@ -76,7 +76,7 @@ class PlanetServiceUnitTest {
     }
 
     @Test
-    fun `SavePlanets - Given a not found planet for first planet should throw a Planet not found exception`() {
+    fun `CalculateDistance - Given a not found planet for first planet should throw a Planet not found exception`() {
 
         // given
         val planet1Id = UUID.randomUUID()
@@ -96,7 +96,7 @@ class PlanetServiceUnitTest {
     }
 
     @Test
-    fun `SavePlanets - Given a not found planet for second planet should throw a Planet not found exception`() {
+    fun `calculateDistance - Given a not found planet for second planet should throw a Planet not found exception`() {
 
         // given
         val planet1Id = UUID.randomUUID()

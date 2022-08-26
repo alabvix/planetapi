@@ -21,9 +21,15 @@ class CalculateDistanceInputPayloadTest {
             validator.validate(payload)
 
         Assertions.assertFalse(violations.isEmpty())
-        Assertions.assertEquals(1, violations.size)
-        val violation = violations.iterator().next()
-        Assertions.assertEquals("Invalid planet UUID", violation.message)
+        Assertions.assertEquals(2, violations.size)
+
+        val violationIt = violations.iterator();
+        var count = 1
+        violationIt.forEach {
+            Assertions.assertEquals("Invalid planet UUID", it.message)
+            Assertions.assertEquals("planet" + count + "Id", it.propertyPath.toString())
+            count ++
+        }
 
     }
 }
