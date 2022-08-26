@@ -96,7 +96,7 @@ class PlanetServiceUnitTest {
     }
 
     @Test
-    fun `calculateDistance - Given a not found planet for second planet should throw a Planet not found exception`() {
+    fun `CalculateDistance - Given a not found planet for second planet should throw a Planet not found exception`() {
 
         // given
         val planet1Id = UUID.randomUUID()
@@ -126,7 +126,7 @@ class PlanetServiceUnitTest {
         val planet1Id = UUID.randomUUID()
         val planet2Id = UUID.randomUUID()
         val planetA = PlanetEntity(planet1Id,"Jupiter", 1.00, 2.00, 3.00)
-        val planetB = PlanetEntity(planet2Id,"Jupiter", -4.00, -5.00, -6.00)
+        val planetB = PlanetEntity(planet2Id,"Venus", -4.00, -5.00, -6.00)
         val input = CalculateDistanceInputPayload(planet1Id.toString(), planet2Id.toString())
 
         Mockito.`when` (planetRepository.findById(planet1Id)).thenReturn(Optional.of(planetA))
